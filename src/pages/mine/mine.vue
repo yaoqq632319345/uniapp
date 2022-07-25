@@ -3,10 +3,16 @@
 </template>
 
 <script setup lang="ts">
-console.log(
-  '%c import.meta.env.VITE_SOME_KEY' + import.meta.env.VITE_SOME_KEY,
-  'color: red'
-);
+import request from '../../utils/request';
+request({
+  url: '/sdklfjlaksdjflksd',
+})
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((error) => {
+    console.log('%c error' + error, 'color: red');
+  });
 </script>
 
 <style lang="scss">
